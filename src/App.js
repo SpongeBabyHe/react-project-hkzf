@@ -2,7 +2,7 @@ import React from "react";
 //导入组件
 import { Button } from "antd-mobile";
 //导入路由组件
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 //导入Home和CityList组件
 import Home from "./pages/Home";
 import CityList from "./pages/CityList";
@@ -18,10 +18,13 @@ function App() {
         <Link to="/home">首页</Link>
         <Link to="/citylist">城市选择</Link>
         {/* 配置路由 */}
-        <Route path="/home" Component={Home}></Route>
-        <Route path="/citylist" Component={CityList}></Route>
-      </div>
-    </Router>
+        <Routes>
+          <Route path="/home" element={<Home />}></Route>
+          <Route path="/citylist" element={<CityList />}></Route>
+        </Routes>
+
+      </div >
+    </Router >
 
   );
 }
