@@ -15,8 +15,12 @@ function App() {
 
 
         {/* 配置导航菜单 */}
-        <Link to="/home">首页</Link>
-        <Link to="/citylist">城市选择</Link>
+        <ul>
+          <li><Link to="/home">首页</Link></li>
+          <li><Link to="/citylist">城市选择</Link></li>
+        </ul>
+
+
         {/* 配置路由 */}
         <Routes>
           <Route path="/home" element={<Home />}></Route>
