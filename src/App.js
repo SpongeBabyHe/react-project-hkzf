@@ -23,7 +23,7 @@ function App() {
 
         {/* 配置路由 */}
         <Routes>
-          <Route path="/home" element={<Home />}></Route>
+          <Route path="/home/*" element={<Home />}></Route>
           <Route path="/citylist" element={<CityList />}></Route>
         </Routes>
 
