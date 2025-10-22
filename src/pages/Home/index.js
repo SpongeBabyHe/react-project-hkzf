@@ -7,7 +7,7 @@ import {
   UnorderedListOutline,
   UserOutline,
 } from "antd-mobile-icons";
-import "./index.css";
+import "./index.scss";
 
 // TabBar 组件
 const BottomTabBar = () => {
@@ -54,13 +54,13 @@ const BottomTabBar = () => {
 export default class Home extends React.Component {
   render() {
     return (
-      <div>
-        <div >
+      <div className="Home">
+        <div>
           <Outlet />
         </div>
 
         {/* TabBar */}
-        <div >
+        <div>
           <BottomTabBar />
         </div>
       </div>

@@ -1,4 +1,8 @@
 /* Index 页面样式 */
+.index-container {
+  background-color: #f5f5f5;
+}
+
 /* 轮播图样式 */
 .swiper-image {
   width: 100%;
@@ -8,20 +12,127 @@
 }
 
 /* 导航网格样式 */
-.nav-grid-container .adm-grid-item>div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 8px;
+.nav-grid-container {
+  .adm-grid-item>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
 
-  img {
-    width: 32px;
-    height: 32px;
-    margin-bottom: 4px;
+    img {
+      width: 32px;
+      height: 32px;
+      margin-bottom: 4px;
+    }
+
+    span {
+      font-size: 12px;
+    }
   }
+}
+
+/* 标题样式 */
+h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0 8px 0;
+  padding: 0 8px;
 
   span {
     font-size: 12px;
+    color: #999;
+    font-weight: normal;
   }
+}
 
+/* 推荐租房小组样式 */
+.group-grid-container {
+  .adm-grid-item>div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    background: #fff;
+
+    >div {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      p {
+        margin: 0 0 4px 0;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      span {
+        font-size: 12px;
+        color: #999;
+      }
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+      margin-left: 8px;
+      border-radius: 4px;
+    }
+  }
+}
+
+/* 最新资讯样式 */
+.news-grid-container {
+  .adm-grid-item>div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    background: #fff;
+
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-right: 8px;
+    }
+
+    >div {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      p {
+        margin: 0 0 4px 0;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .news-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 4px;
+
+        span {
+          font-size: 12px;
+          color: #999;
+
+          &:first-child {
+            flex: 1;
+          }
+
+          &:last-child {
+            margin-left: 8px;
+          }
+        }
+      }
+    }
+  }
 }
