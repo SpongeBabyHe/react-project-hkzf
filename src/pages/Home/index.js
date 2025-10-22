@@ -31,12 +31,12 @@ const BottomTabBar = () => {
       icon: <MessageOutline className="tab-icon" />,
     },
     {
-      key: "/home",
+      key: "/home/houseList",
       title: "Rent",
       icon: <UnorderedListOutline className="tab-icon" />,
     },
     {
-      key: "/home",
+      key: "/home/profile",
       title: "Me",
       icon: <UserOutline className="tab-icon" />,
     },
@@ -54,10 +54,8 @@ const BottomTabBar = () => {
 export default class Home extends React.Component {
   render() {
     return (
-      <div style={{ backgroundColor: "#f5f5f5" }}>
-        {/* 顶部内容区域 */}
+      <div>
         <div >
-          {/* <h2>首页</h2> */}
           <Outlet />
         </div>
 
