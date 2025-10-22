@@ -3,12 +3,45 @@
   background-color: #f5f5f5;
 }
 
-/* 轮播图样式 */
-.swiper-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
+/* 轮播图容器样式 */
+.swiper-container {
+  position: relative;
+  margin: 8px;
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}
+
+/* 搜索区域Grid样式 */
+.search-grid-container {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  z-index: 10;
+
+  .adm-grid-item>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.9);
+    height: 32px;
+    gap: 0px;
+
+  }
+
+  .adm-search-bar {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+  }
 }
 
 /* 导航网格样式 */

@@ -1,11 +1,11 @@
 import React from "react";
 
 
-export default class CityList extends React.Component {
+export default class Map extends React.Component {
   render() {
     return (
       <div>
-        城市选择页面
+        地图找房页面
       </div>
     )
   }

@@ -10,6 +10,9 @@ import News from "./pages/News";
 import HouseList from "./pages/HouseList";
 import Profile from "./pages/Profile";
 import Index from "./pages/Index";
+import Map from "./pages/Map";
+
+
 
 function App() {
   return (
@@ -27,7 +30,7 @@ function App() {
             <Route path="profile" element={<Profile />} />
           </Route>
           <Route path="/cityList" element={<CityList />} />
-
+          <Route path="/map" element={<Map />} />
         </Routes>
 
       </div >
