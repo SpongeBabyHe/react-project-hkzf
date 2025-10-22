@@ -3,7 +3,7 @@ import { Swiper, Grid } from "antd-mobile";
 import nav1 from "../../assets/images/nav1.png";
 import nav2 from "../../assets/images/nav2.png";
 import nav3 from "../../assets/images/nav3.png";
-import "./index.css";
+import "./index.scss";
 
 const images = [
   '/images/1.jpg',

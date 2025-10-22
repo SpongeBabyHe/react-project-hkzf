@@ -13,14 +13,15 @@
   flex-direction: column;
   align-items: center;
   padding: 8px;
-}
 
-.nav-grid-container img {
-  width: 32px;
-  height: 32px;
-  margin-bottom: 4px;
-}
+  img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 4px;
+  }
 
-.nav-grid-container span {
-  font-size: 12px;
+  span {
+    font-size: 12px;
+  }
+
 }
