@@ -1,0 +1,17 @@
+/* Index 页面样式 */
+.nav-grid-container .adm-grid-item>div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+}
+
+.nav-grid-container img {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 4px;
+}
+
+.nav-grid-container span {
+  font-size: 12px;
+}
