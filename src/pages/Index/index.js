@@ -1,9 +1,8 @@
 import React from "react";
 import { Swiper, Grid } from "antd-mobile";
-import img1 from "../../assets/images/nav1.png";
-import img2 from "../../assets/images/nav2.png";
-import img3 from "../../assets/images/nav3.png";
-import img4 from "../../assets/images/nav1.png";
+import nav1 from "../../assets/images/nav1.png";
+import nav2 from "../../assets/images/nav2.png";
+import nav3 from "../../assets/images/nav3.png";
 import "./index.css";
 
 const images = [
@@ -11,6 +10,33 @@ const images = [
   '/images/2.jpg',
   '/images/3.jpg',
   '/images/4.jpg'
+];
+
+const navs = [
+  {
+    id: 1,
+    img: nav1,
+    title: '整租',
+    path: '/home/rent'
+  },
+  {
+    id: 2,
+    img: nav2,
+    title: '合租',
+    path: '/home/rent'
+  },
+  {
+    id: 3,
+    img: nav3,
+    title: '地图找房',
+    path: '/home/rent'
+  },
+  {
+    id: 4,
+    img: nav1, // 使用 nav1 作为第四个图标
+    title: '去出租',
+    path: '/home/rent'
+  },
 ];
 
 export default class Index extends React.Component {
@@ -23,41 +49,20 @@ export default class Index extends React.Component {
               <img
                 src={src}
                 alt={`轮播图${index + 1}`}
-                style={{
-                  width: '100%',
-                  height: '200px',
-                  objectFit: 'cover',
-                  borderRadius: '8px'
-                }}
+                className="swiper-image"
               />
             </Swiper.Item>
           ))}
         </Swiper>
         <Grid columns={4} gap={8} className="nav-grid-container">
-          <Grid.Item>
-            <div>
-              <img src={img1} alt="img1" />
-              <span>整租</span>
-            </div>
-          </Grid.Item>
-          <Grid.Item>
-            <div>
-              <img src={img2} alt="img2" />
-              <span>合租</span>
-            </div>
-          </Grid.Item>
-          <Grid.Item>
-            <div>
-              <img src={img3} alt="img3" />
-              <span>地图找房</span>
-            </div>
-          </Grid.Item>
-          <Grid.Item>
-            <div>
-              <img src={img4} alt="img4" />
-              <span>去出租</span>
-            </div>
-          </Grid.Item>
+          {navs.map((nav) => (
+            <Grid.Item key={nav.id}>
+              <div>
+                <img src={nav.img} alt={nav.title} />
+                <span>{nav.title}</span>
+              </div>
+            </Grid.Item>
+          ))}
         </Grid>
       </div>
     );
