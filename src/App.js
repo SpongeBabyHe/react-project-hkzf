@@ -1,8 +1,6 @@
 import React from "react";
-//导入组件
-import { Button } from "antd-mobile";
 //导入路由组件
-import { BrowserRouter as Router, Routes, Route, Link, Outlet, Navigate } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 //导入Home和CityList组件
 import Home from "./pages/Home";
 import CityList from "./pages/CityList";
@@ -10,7 +8,7 @@ import News from "./pages/News";
 import HouseList from "./pages/HouseList";
 import Profile from "./pages/Profile";
 import Index from "./pages/Index";
-import Map from "./pages/Map";
+import MapPage from "./pages/Map";
 
 
 
@@ -30,7 +28,7 @@ function App() {
             <Route path="profile" element={<Profile />} />
           </Route>
           <Route path="/cityList" element={<CityList />} />
-          <Route path="/map" element={<Map />} />
+          <Route path="/map" element={<MapPage />} />
         </Routes>
 
       </div >

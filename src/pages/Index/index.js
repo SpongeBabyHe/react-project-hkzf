@@ -7,6 +7,7 @@ import nav2 from "../../assets/images/nav2.png";
 import nav3 from "../../assets/images/nav3.png";
 import group1 from "../../assets/images/group1.jpeg";
 import group2 from "../../assets/images/group2.jpg";
+import locationService from "../../utils/locationService";
 import "./index.scss";
 
 const images = [
@@ -94,6 +95,23 @@ const newsItems = [
   },
 ];
 export default class Index extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentCity: '上海' // 默认城市
+    };
+  }
+
+  componentDidMount() {
+    this.getCurrentCity();
+  }
+
+  // 获取当前城市
+  getCurrentCity = async () => {
+    const city = await locationService.getCurrentCity();
+    this.setState({ currentCity: city });
+  };
+
   render() {
     return (
       <div className="index-container">
@@ -115,7 +133,7 @@ export default class Index extends React.Component {
               <Grid.Item span={1}>
                 <div>
                   <Link to="/cityList" style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <span>上海</span>
+                    <span>{this.state.currentCity}</span>
                     <Space>
                       <DownFill />
                     </Space>

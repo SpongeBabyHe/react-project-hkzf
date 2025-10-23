@@ -23,6 +23,16 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
   <title>React 好客租房</title>
+  <script>
+    (function () {
+      const script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDxLIQf8VYoMAweP8WYW3HNKLPY2RhFgJc&libraries=places&loading=async';
+      script.async = true;
+      script.defer = true;
+      document.getElementsByTagName('head')[0].appendChild(script);
+    })();
+  </script>
 </head>
 
 <body>
