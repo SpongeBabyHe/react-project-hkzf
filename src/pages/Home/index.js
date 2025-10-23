@@ -54,7 +54,7 @@ const BottomTabBar = () => {
 export default class Home extends React.Component {
   render() {
     return (
-      <div className="Home">
+      <div className="home-container">
         <div>
           <Outlet />
         </div>

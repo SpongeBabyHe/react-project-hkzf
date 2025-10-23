@@ -8,7 +8,7 @@ class LocationService {
 
   // 初始化地理编码器
   initializeGeocoder() {
-    if (window.google && window.google.maps) {
+    if (window.google && window.google.maps && window.google.maps.Geocoder) {
       this.geocoder = new window.google.maps.Geocoder();
     } else {
       // 如果Google Maps还未加载，等待加载完成
@@ -19,7 +19,7 @@ class LocationService {
   // 等待Google Maps API加载完成
   waitForGoogleMaps() {
     const checkGoogleMaps = () => {
-      if (window.google && window.google.maps) {
+      if (window.google && window.google.maps && window.google.maps.Geocoder) {
         this.geocoder = new window.google.maps.Geocoder();
       } else {
         setTimeout(checkGoogleMaps, 100);
